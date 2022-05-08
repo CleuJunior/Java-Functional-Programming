@@ -1,10 +1,10 @@
-package com.functional.java;
+package com.functional.java.imperative;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.functional.java.Main.Gender.FEMALE;
+import static com.functional.java.imperative.Main.Gender.FEMALE;
 
 public class Main {
     public static void main(String[] args) {
