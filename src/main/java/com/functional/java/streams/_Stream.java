@@ -1,7 +1,6 @@
 package com.functional.java.streams;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class _Stream {
     public static void main(String[] args) {
@@ -20,6 +19,19 @@ public class _Stream {
                 .map(person -> person.name)
                 .mapToInt(String::length)
                 .forEach(System.out::println);
+
+        System.out.println();
+
+
+        boolean containsOnlyFemales = people.stream()
+                .allMatch(person -> Gender.FEMALE.equals(person.gender));
+
+        System.out.println(containsOnlyFemales);
+
+        boolean containsFemales = people.stream()
+                .anyMatch(person -> Gender.FEMALE.equals(person.gender));
+
+        System.out.println(containsFemales);
 
     }
 
